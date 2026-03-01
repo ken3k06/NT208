@@ -1,0 +1,11 @@
+{
+  "name": "cvht-playwright",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.50.1"
+  }
+}
