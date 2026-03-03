@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { StatCard } from "../../components/stat-card";
 import { getMacroDashboard } from "../../lib/api";
 
@@ -22,6 +23,26 @@ export default async function DashboardPage() {
           hint="Yêu cầu CVHT can thiệp"
           danger
         />
+      </section>
+
+      <section className="card" style={{ marginTop: 16 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+          <h3 style={{ marginTop: 0, marginBottom: 8 }}>Thao tác dữ liệu</h3>
+          <Link
+            href="/scores/upload"
+            style={{
+              display: "inline-block",
+              padding: "10px 14px",
+              borderRadius: 10,
+              background: "#4f8cff",
+              color: "white",
+              fontWeight: 600,
+            }}
+          >
+            Upload CSV điểm
+          </Link>
+        </div>
+        <p style={{ color: "#9aa6c3", marginTop: 6 }}>Chỉ tài khoản ADMIN mới có quyền upload/update điểm.</p>
       </section>
 
       <section className="card" style={{ marginTop: 16 }}>
